@@ -51,3 +51,17 @@ These are **feature records**, not additional fictional user prompts. The actual
 | Interactive menu and order form | Prompt 1 (Nov. 18); Prompt 2 testing request | ChatGPT (GPT-6 review) | Category filters, cart quantity controls, demo checkout validation, dark mode, FAQ | Isolated logic tests pass; record valid/invalid browser form tests and any fixes here. |
 
 **Ownership/reflection prompts:** Which generated feature did you change or improve yourself? What did you discover during Chrome/Edge testing? Which AI suggestions did you reject or correct, and why? Write specific details from your own testing rather than claiming corrections that did not happen.
+
+## Prompt 3 — November 22, 2026 — Cart persistence bug fix
+
+**Tool:** ChatGPT (GPT-6).
+
+> There is an issue where on the menu screen, if I add an item to my cart and then press "Review My Order" or "Order", my cart gets reset. Can you fix this issue?
+
+**Issue identified:** The site used `localStorage` for cart persistence. Browsers can isolate storage between separate `file://` HTML pages, so opening the files directly can lose cart state when navigating. This problem may not occur over an HTTP server.
+
+**AI-generated correction:** Updated `script.js` to transfer validated cart quantities between internal pages through a temporary URL query parameter when opened through `file://`. On the destination page, the cart is restored and the query parameter is removed where browser history operations are permitted. Normal hosted pages continue using localStorage unchanged.
+
+**Verification:** JavaScript syntax and static link checks passed. Simulated tests passed for Menu → Order with multiple items, Order → Menu after changing quantity, and removal of the temporary query parameter. Browser testing is still recommended.
+
+**Student review / corrections:** [Describe your own confirmation of the fixed cart behavior in Chrome or Edge.]

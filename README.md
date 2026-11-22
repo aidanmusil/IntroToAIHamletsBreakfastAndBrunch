@@ -21,3 +21,6 @@ All restaurant details and prices are fictional. Checkout is a front-end demonst
 ## Testing and submission
 
 See `TEST_REPORT.md` for verified file-level/isolated-JavaScript checks and the browser tests you still need to run. See `AI_PROMPT_LOG.md` for the original project prompt, testing prompt, and feature-by-feature documentation. A live browser check is still required before claiming that Console, Network, and responsive layout tests pass.
+
+## Cart persistence fix
+Cart contents are saved in `localStorage` for hosted sites. When using `file://` directly, the website also carries the cart between its HTML pages in a temporary navigation URL parameter, because some browsers isolate storage for local files. For the most reliable experience, use VS Code Live Server or GitHub Pages.

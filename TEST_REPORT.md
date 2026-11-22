@@ -42,3 +42,12 @@
 - [x] Include this `TEST_REPORT.md`, and update its pending browser checks after testing.
 
 **Note:** These results apply to the files in this ZIP archive; repeat browser checks on the deployed site after uploading to GitHub Pages.
+
+
+## Follow-up regression check — Cart persistence (Nov. 22, 2026)
+
+- **Reported issue:** Items added on Menu appeared to reset after selecting Review My Order or Order.
+- **Cause addressed:** `file://` pages may not share localStorage consistently.
+- **Fix:** Added a `file://` navigation fallback to `script.js` that safely carries known menu item quantities between pages; hosted HTTP(S) behavior is unchanged.
+- **Automated checks:** JavaScript syntax PASS; static paths PASS; simulated Menu → Order and Order → Menu cart transfer PASS.
+- **Manual browser check still needed:** Add two pancakes and a breakfast plate on `menu.html`, click Review My Order, verify quantities and subtotal, return to Menu and click the navigation Order link, then verify again. Also verify the same flow on a Live Server or GitHub Pages site.
