@@ -13,3 +13,41 @@
 ## Future prompts
 
 Append each new prompt verbatim, with its date, the AI response or change, and what you accepted, modified, or rejected.
+
+## Prompt 2 — November 22, 2026 — Testing and submission
+
+**Tool:** ChatGPT (GPT-6 for this testing/review interaction; initial-generation model version not independently recorded).
+
+> **Check the following to make sure that the Hamlet's Breakfast and Brunch website follows these tests:**
+>
+> Test your website and submit a short test report covering at least the items below. For each item, state what you tested, what happened, and any fixes you made:
+>
+> 1. **Navigation:** click every link in the nav menu on every page — all pages load and link to each other
+> 2. **Images:** all images load correctly, and every `<img>` tag has alt text
+> 3. **JavaScript feature:** your interactive feature behaves as expected (test every state — e.g., toggle on and off, valid and invalid form input)
+> 4. **Responsive layout:** the site displays correctly at desktop width and on a phone-sized screen. In Chrome or Edge, press F12, click the device toolbar icon, and select a phone-sized device to check
+> 5. **Console:** no errors in the browser console (F12 → Console tab) on any page
+> 6. **Links and paths:** no broken links, missing files, or 404s in the Network tab
+>
+> **Submission checklist**
+>
+> Submit the following:
+>
+> - A link to your GitHub repository containing all website files
+> - (Optional but encouraged) A link to the live site via GitHub Pages
+> - Your prompt log for at least three features, noting which LLM(s) you used
+> - Your test report
+
+**AI response/work performed:** Audited all local HTML links, images, CSS/JS references, and responsive breakpoints; ran JavaScript syntax and isolated menu/cart tests; wrote a six-category test report. Tried browser testing, but Chromium blocked local navigation, so browser results were left pending.
+
+### Feature-by-feature AI workflow records
+
+These are **feature records**, not additional fictional user prompts. The actual user prompts are transcribed above and under Prompt 1.
+
+| Feature | Actual prompt source | AI tool | AI-generated implementation | Student review / corrections |
+|---|---|---|---|---|
+| Shared navigation and three pages | Prompt 1 (Nov. 18) | ChatGPT (initial model version not recorded) | `index.html`, `menu.html`, `order.html` with shared navigation and stylesheet | Navigation target files pass static tests; record manual click results here. |
+| Responsive styling and imagery | Prompt 1 (Nov. 18) | ChatGPT (initial model version not recorded); AI image generation used during website creation | Shared `style.css`, two JPEG image assets, mobile media queries | Image files and paths pass file checks; record device-toolbar visual results here. |
+| Interactive menu and order form | Prompt 1 (Nov. 18); Prompt 2 testing request | ChatGPT (GPT-6 review) | Category filters, cart quantity controls, demo checkout validation, dark mode, FAQ | Isolated logic tests pass; record valid/invalid browser form tests and any fixes here. |
+
+**Ownership/reflection prompts:** Which generated feature did you change or improve yourself? What did you discover during Chrome/Edge testing? Which AI suggestions did you reject or correct, and why? Write specific details from your own testing rather than claiming corrections that did not happen.

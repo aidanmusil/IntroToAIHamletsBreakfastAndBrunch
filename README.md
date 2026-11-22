@@ -17,3 +17,7 @@ Open `index.html` in a browser, or use VS Code Live Server. Use the navigation l
 
 ## Important
 All restaurant details and prices are fictional. Checkout is a front-end demonstration, not a real purchase. The cart and theme are saved using browser localStorage. Images were cropped from an AI-generated restaurant design concept.
+
+## Testing and submission
+
+See `TEST_REPORT.md` for verified file-level/isolated-JavaScript checks and the browser tests you still need to run. See `AI_PROMPT_LOG.md` for the original project prompt, testing prompt, and feature-by-feature documentation. A live browser check is still required before claiming that Console, Network, and responsive layout tests pass.
