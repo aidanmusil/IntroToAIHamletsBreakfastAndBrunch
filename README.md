@@ -2,6 +2,9 @@
 
 Three-page fictional restaurant website for a course project.
 
+## GITHUB PAGE LINK
+https://aidanmusil.github.io/IntroToAIHamletsBreakfastAndBrunch/index.html
+
 ## Run
 Open `index.html` in a browser, or use VS Code Live Server. Use the navigation links to access Menu and Order.
 
